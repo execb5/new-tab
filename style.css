@@ -44,7 +44,18 @@ main h1 {
   color:    #3e4e3e;
 }
 
+li div {
+	display: inline-block;
+}
 
+.hidden {
+	display: none;
+}
+
+.nsfw a,
+.nsfw a:visited {
+	color: #c33027
+}
 
 main span {
     font-size: 14px;

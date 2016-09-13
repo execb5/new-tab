@@ -20,7 +20,7 @@
 				<h1>おかえり、ご主人様</h1>
 
 				<form method="get" action="https://google.com/search">
-					<input class="search-box" type="text" name="q" placeholder="Google 検索"/>
+					<input class="search-box" type="text" name="q" placeholder="Google 検索" autofocus="autofocus"/>
 				</form>
 
 				<span>ただしその頃にはあんたは八つ裂きになっているだろうけどな</span>
@@ -31,11 +31,15 @@
 						<li>
 							<a href='http://www.4chan.org'><strong>４ちゃん -</strong></a>
 							<a href='http://boards.4chan.org/a/' title="Anime">/a/</a> ~
-							<a href='http://boards.4chan.org/b/' title="Random">/b/</a> ~
+							<div class="nsfw hidden">
+								<a href='http://boards.4chan.org/b/' title="Random">/b/</a> ~
+							</div>
 							<a href='http://boards.4chan.org/g/' title="Technology">/g/</a> ~
-							<a href='http://boards.4chan.org/gif/' title="Adult GIF">/gif/</a> ~
-							<a href='http://boards.4chan.org/pol/' title="Politically Incorrect">/pol/</a> ~
-							<a href='http://boards.4chan.org/t/' title="Torrents">/t/</a> ~
+							<div class="nsfw hidden">
+								<a href='http://boards.4chan.org/gif/' title="Adult GIF">/gif/</a> ~
+								<a href='http://boards.4chan.org/pol/' title="Politically Incorrect">/pol/</a> ~
+								<a href='http://boards.4chan.org/t/' title="Torrents">/t/</a> ~
+							</div>
 							<a href='http://boards.4chan.org/v/' title="Video Games">/v/</a> ~
 							<a href='http://boards.4chan.org/w/' title="Anime/Wallpaper">/w/</a> ~
 							<a href='http://boards.4chan.org/wg/' title="Wallpapers/General">/wg/</a> ~
@@ -48,12 +52,20 @@
 							<a href='https://youtube.com/'>youtube</a> ~
 							<a href='http://alpha.wallhaven.cc/'>wallhaven</a> ~
 							<a href='http://myanimelist.net/animelist/ExecB5'>mal</a> ~
-							<a href='http://nhentai.net/'>nhentai</a> ~
+							<div class="nsfw hidden">
+								<a href='http://nhentai.net/'>nhentai</a> ~
+							</div>
 						</li>
 						<li>
 							<strong>ゲーム -</strong>
 							<a href='https://store.steampowered.com/'>steam</a> ~
 							<a href='https://gog.com/'>gog</a> ~
+						</li>
+						<li>
+							<strong>チャット -</strong>
+							<a href='https://hangouts.google.com/'>hangouts</a> ~
+							<a href='https://www.messenger.com/'>messenger</a> ~
+							<a href='https://web.whatsapp.com/'>zapzap</a> ~
 						</li>
 						<li>
 							<strong>トレント -</strong>
@@ -64,16 +76,20 @@
 							<a href='http://bakabt.me/'>bbt</a> ~
 							<a href='https://coalgirls.wakku.to/'>cg</a> ~
 							<a href='http://fffansubs.org/'>fff</a> ~
-							<a href='http://torrents.yourexotic.com/'>ye</a> ~
+							<div class="nsfw hidden">
+								<a href='http://torrents.yourexotic.com/'>ye</a> ~
+							</div>
 						</li>
 						<li>
 							<strong>ユーティリティ -</strong>
-							<a href='https://maps.google.com.br/'>マップ</a> ~
+							<a href='https://inbox.google.com/'>Eメール</a> ~
 							<a href='https://translate.google.com/'>トランスレーター</a> ~
-							<a href='http://imgur.com/'>imgur</a> ~
+							<a href='https://maps.google.com.br/'>マップ</a> ~
 						</li>
 						<li>
 							<strong>スラック -</strong>
+							<a
+								href='https://notyetateam.slack.com/messages/general/'>Not yet a team</a> ~
 							<a href='https://tigerhood.slack.com/messages/general/'>tigerhood</a> ~
 							<a href='https://wakefulpigs.slack.com/messages/general/'>wakefulpigs</a> ~
 						</li>
@@ -93,6 +109,42 @@
 		<footer>
 			©Matthias Nunes, 2016.
 		</footer>
+
+		<script type="text/javascript">
+
+			const nsfw = "nsfw";
+			let buffer = "";
+
+			document.onkeypress = e => {
+
+				buffer += e.key;
+				if (buffer.length > nsfw.length) {
+					buffer = buffer.substr(1, 4);
+				}
+
+				if (buffer.toLowerCase() === nsfw) {
+					toggle();
+				}
+
+				console.log(buffer);
+			}
+
+			let nsfw_showing = false;
+			function toggle() {
+				let a = document.querySelectorAll(".nsfw")
+				for (let i = 0; i < a.length; i++) {
+					let classList = a[i].classList;
+					if (nsfw_showing) {
+						classList.add("hidden");
+					}
+					else {
+						classList.remove("hidden");
+					}
+				}
+				nsfw_showing = !nsfw_showing;
+			}
+			
+		</script>
 
 	</body>
 </html>
