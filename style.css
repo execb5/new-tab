@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'japanesePixel';
+    src: url("fonts/jackeyfont.ttf");
+}
+
+.title {
+    font-family: 'japanesePixel', monospace;
+}
+
 body {
     background: #0a0f14;
     color: #98d1ce;
