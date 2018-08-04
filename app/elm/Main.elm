@@ -30,28 +30,29 @@ type Msg
 
 view : Model -> Html Msg
 view model =
-    div []
-        [ div []
-            [ div []
-                [ text "おかえり"
-                , text "主人様"
-                ]
-            , Html.form [ action "https://google.com/search", method "get" ]
-                [ input [ class "search-box", name "q", placeholder "Google 検索", type_ "text" ]
-                    []
-                , text ""
-                ]
-            , span [ class "title" ]
-                [ text "ただしその頃にはあんたは八つ裂きになっているだろうけどな" ]
+    div [ class "board" ]
+        [ div [ class "square", class "title" ]
+            [ div [ class "title-letter" ] [ text "お" ]
+            , div [ class "title-letter" ] [ text "か" ]
+            , div [ class "title-letter" ] [ text "え" ]
+            , div [ class "title-letter" ] [ text "り" ]
             ]
-        , nav []
-            [ ul []
-                [ li []
-                    [ text model
-                    , text "オトナの甘さ"
-                    ]
+        , div [ class "square" ]
+            [ div [ class "category-title" ] [ text "Boards" ]
+            , ul [ class "" ]
+                [ li [] [ text "/a/" ]
+                , li [] [ text "/b/" ]
                 ]
             ]
+        ]
+
+
+form : Html Msg
+form =
+    Html.form [ action "https://google.com/search", method "get" ]
+        [ input [ class "search-box", name "q", placeholder "Google 検索", type_ "text" ]
+            []
+        , text ""
         ]
 
 
