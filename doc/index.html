@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>~ ホームページ ~</title>
+		<meta name="viewport" content="width=device-width">
+		<meta name="theme-color" content="#652770"/>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="/app.css">
+		<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+		<script src="/vendor.js"></script>
+		<script src="/app.js"></script>
+		<script>require('initialize');</script>
+	</head>
+	<body>
+		<div id="main"></div>
+		<script src="/js/main.js"></script>
+		<script>
+			var node = document.getElementById('main');
+			var app = Elm.Main.embed(node);
+		</script>
+	</body>
+</html>

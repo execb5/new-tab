@@ -1,0 +1,240 @@
+$ultra-light: 100
+$light: 200
+$regular: 300
+$demi-bold: 400
+$bold: 500
+$extra-bold: 600
+$heavy: 700
+
+
+$default-size: 20px
+$size-a: 1rem
+$size-b: $size-a * 1.3
+$size-c: $size-b * 1.3
+$size-d: $size-c * 1.3
+$size-e: $size-d * 1.3
+$size-f: $size-e * 1.3
+$size-g: $size-f * 1.3
+
+// Color palette */
+
+$white: #fff
+
+// As hex codes */
+
+$color-primary-0: #652770 // Main Primary color */
+$color-primary-1: #895493
+$color-primary-2: #773b81
+$color-primary-3: #54165e
+$color-primary-4: #430a4d
+
+$color-secondary-1-0: #933157 // Main Secondary color (1) */
+$color-secondary-1-1: #c16c8d
+$color-secondary-1-2: #aa4c70
+$color-secondary-1-3: #7c1b41
+$color-secondary-1-4: #650b2e
+
+$color-secondary-2-0: #482e74 // Main Secondary color (2) */
+$color-secondary-2-1: #725c98
+$color-secondary-2-2: #5b4386
+$color-secondary-2-3: #361d62
+$color-secondary-2-4: #270f50
+
+$color-complement-0: #99a637 // Main Complement color */
+$color-complement-1: #cfda7a
+$color-complement-2: #b3c056
+$color-complement-3: #7f8c1f
+$color-complement-4: #66720c
+
+// As RGBa codes */
+
+$rgba-primary-0: rgba(101, 39, 112, 1) // Main Primary color */
+$rgba-primary-1: rgba(137, 84, 147, 1)
+$rgba-primary-2: rgba(119, 59, 129, 1)
+$rgba-primary-3: rgba(84, 22, 94, 1)
+$rgba-primary-4: rgba(67, 10, 77, 1)
+
+$rgba-secondary-1-0: rgba(147, 49, 87, 1) // Main Secondary color (1) */
+$rgba-secondary-1-1: rgba(193, 108, 141, 1)
+$rgba-secondary-1-2: rgba(170, 76, 112, 1)
+$rgba-secondary-1-3: rgba(124, 27, 65, 1)
+$rgba-secondary-1-4: rgba(101, 11, 46, 1)
+
+$rgba-secondary-2-0: rgba(72, 46, 116, 1) // Main Secondary color (2) */
+$rgba-secondary-2-1: rgba(114, 92, 152, 1)
+$rgba-secondary-2-2: rgba(91, 67, 134, 1)
+$rgba-secondary-2-3: rgba(54, 29, 98, 1)
+$rgba-secondary-2-4: rgba(39, 15, 80, 1)
+
+$rgba-complement-0: rgba(153, 166, 55, 1) // Main Complement color */
+$rgba-complement-1: rgba(207, 218, 122, 1)
+$rgba-complement-2: rgba(179, 192, 86, 1)
+$rgba-complement-3: rgba(127, 140, 31, 1)
+$rgba-complement-4: rgba(102, 114, 12, 1)
+
+
+@font-face
+  font-family: 'Jackey'
+  src: url('fonts/jackeyfont.ttf')
+
+
+@mixin square($background-color, $border-color, $text-color, $side)
+  align-items: center
+  background: $background-color
+  border: 10px solid $border-color
+  border-radius: 10px
+  color: $text-color
+  display: flex
+  flex-flow: column nowrap
+  height: $side
+  justify-content: flex-start
+  padding: 20px
+  width: $side
+
+
+// Reset
+
+html
+  background-color: $white
+
+  *
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section
+  display: block
+
+body
+  line-height: 1
+
+ol,
+ul
+  list-style: none
+
+blockquote,
+q
+  quotes: none
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+
+// Home
+
+html
+  background: linear-gradient(-30deg, $color-secondary-2-4, $color-primary-1)
+  font-family: 'VT323', monospace
+  font-size: $default-size
+  overflow-x: hidden
+  scroll-behavior: smooth
+
+
+a
+  color: inherit
+  text-decoration: none
+
+
+input
+  background: transparent
+  border-color: $color-secondary-1-0
+  border-style: solid
+  border-width: 0 0 2px
+  font-family: 'VT323'
+  font-size: 25px
+  height: 40px
+  outline: 0
+  text-align: center
+  width: 250px
+
+  &:focus
+    outline: none
+
+
+.katakana
+  font-family: 'Noto Sans', sans-serif
+
+
+.hiragana
+  font-family: 'Jackey'
+
+
+.board
+  align-content: center
+  align-items: center
+  display: flex
+  flex-flow: row wrap
+  height: 100vh
+  justify-content: space-around
+  width: 100vw
+
+
+.title
+  max-height: 40vh
+  width: 100vw
+
+
+.content
+  height: 60vh
+  width: 100vw
+
+
+.main-component
+  @include square($color-complement-1, $color-secondary-1-1, $color-primary-4, 30vh)
+
+
+.hero
+  background: repeating-radial-gradient($color-secondary-2-4, $color-secondary-1-0 10%, $color-primary-1 15%)
+  border: outset $color-primary-0 5px
+  color: $color-secondary-1-1
+  font-size: $size-g
+  height: 100%
+  padding-left: 25px
+  padding-top: 14px
+  text-align: center
+  vertical-align: center
+  width: 100%
+
+
+.component
+  @include square($color-complement-0, $color-secondary-1-0, $color-primary-4, 25vh)
+  margin: 20px
+
+.component-title
+  border: solid 2px $color-secondary-1-1
+  color: $color-secondary-1-2
+  font-size: $size-b
+  font-weight: $regular
+  line-height: normal
+  padding: 0 8px
+
+
+.component-list
+  align-items: center
+  display: flex
+  flex-flow: column wrap
+  height: 100%
+  justify-content: space-around
+  padding-top: 10px
+  width: 100%
+
+
