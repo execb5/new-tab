@@ -39,7 +39,7 @@ view model =
                     ]
                 ]
             , Html.form [ action "https://google.com/search", method "get" ]
-                [ input [ class "search-box", name "q", placeholder "Google 検索", type_ "text" ] []
+                [ input [ class "search-box", name "q", placeholder "Google 検索", type_ "text", autofocus True ] []
                 , text ""
                 ]
             ]
