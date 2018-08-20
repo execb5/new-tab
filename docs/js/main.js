@@ -8609,12 +8609,12 @@ var _user$project$Main$view = function (model) {
 															_elm_lang$html$Html$a,
 															{
 																ctor: '::',
-																_0: _elm_lang$html$Html_Attributes$href('https://nyaa.si/'),
+																_0: _elm_lang$html$Html_Attributes$href('http://horriblesubs.info/'),
 																_1: {ctor: '[]'}
 															},
 															{
 																ctor: '::',
-																_0: _elm_lang$html$Html$text('nyaa'),
+																_0: _elm_lang$html$Html$text('horriblesubs'),
 																_1: {ctor: '[]'}
 															}),
 														_1: {
@@ -8623,12 +8623,12 @@ var _user$project$Main$view = function (model) {
 																_elm_lang$html$Html$a,
 																{
 																	ctor: '::',
-																	_0: _elm_lang$html$Html_Attributes$href('https://animebytes.tv/'),
+																	_0: _elm_lang$html$Html_Attributes$href('https://nyaa.si/'),
 																	_1: {ctor: '[]'}
 																},
 																{
 																	ctor: '::',
-																	_0: _elm_lang$html$Html$text('animebytes'),
+																	_0: _elm_lang$html$Html$text('nyaa'),
 																	_1: {ctor: '[]'}
 																}),
 															_1: {
@@ -8637,12 +8637,12 @@ var _user$project$Main$view = function (model) {
 																	_elm_lang$html$Html$a,
 																	{
 																		ctor: '::',
-																		_0: _elm_lang$html$Html_Attributes$href('https://exoticaz.to/'),
+																		_0: _elm_lang$html$Html_Attributes$href('https://animebytes.tv/'),
 																		_1: {ctor: '[]'}
 																	},
 																	{
 																		ctor: '::',
-																		_0: _elm_lang$html$Html$text('exoticaz'),
+																		_0: _elm_lang$html$Html$text('animebytes'),
 																		_1: {ctor: '[]'}
 																	}),
 																_1: {
@@ -8651,15 +8651,30 @@ var _user$project$Main$view = function (model) {
 																		_elm_lang$html$Html$a,
 																		{
 																			ctor: '::',
-																			_0: _elm_lang$html$Html_Attributes$href('http://gen.lib.rus.ec/'),
+																			_0: _elm_lang$html$Html_Attributes$href('https://exoticaz.to/'),
 																			_1: {ctor: '[]'}
 																		},
 																		{
 																			ctor: '::',
-																			_0: _elm_lang$html$Html$text('libgen'),
+																			_0: _elm_lang$html$Html$text('exoticaz'),
 																			_1: {ctor: '[]'}
 																		}),
-																	_1: {ctor: '[]'}
+																	_1: {
+																		ctor: '::',
+																		_0: A2(
+																			_elm_lang$html$Html$a,
+																			{
+																				ctor: '::',
+																				_0: _elm_lang$html$Html_Attributes$href('http://gen.lib.rus.ec/'),
+																				_1: {ctor: '[]'}
+																			},
+																			{
+																				ctor: '::',
+																				_0: _elm_lang$html$Html$text('libgen'),
+																				_1: {ctor: '[]'}
+																			}),
+																		_1: {ctor: '[]'}
+																	}
 																}
 															}
 														}

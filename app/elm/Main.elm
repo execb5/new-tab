@@ -73,6 +73,7 @@ view model =
                     [ text "ダウンロード" ]
                 , div [ class "component-list" ]
                     [ a [ href "https://thepiratebay.org/" ] [ text "thepiratebay" ]
+                    , a [ href "http://horriblesubs.info/" ] [ text "horriblesubs" ]
                     , a [ href "https://nyaa.si/" ] [ text "nyaa" ]
                     , a [ href "https://animebytes.tv/" ] [ text "animebytes" ]
                     , a [ href "https://exoticaz.to/" ] [ text "exoticaz" ]
